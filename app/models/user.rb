@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, 
-                    fromat: { with: VALID_EMAIL_REGEX },
+                    format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
 
   private
