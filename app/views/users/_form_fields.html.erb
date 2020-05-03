@@ -1,10 +1,10 @@
 <div class="form-group">
+  <%= form.label :title %>
+  <%= form.text_field :title, placeholder: "Mr., Mrs., Miss, Dr., etc.", class: "form-control" %>
   <%= form.label :name %>
   <%= form.text_field :name, autofocus: true, placeholder: "Last, First", class: "form-control" %>
   <%= form.label :email %>
   <%= form.email_field :email, class: "form-control" %>
-  <%= form.label :title %>
-  <%= form.text_field :title, placeholder: "Mr., Mrs., Miss, Dr., etc.", class: "form-control" %>
   <%= form.label :phone %>
   <%= form.text_field :phone, class: "form-control" %>
   <%= form.label :status %>

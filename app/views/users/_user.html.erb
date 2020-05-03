@@ -1,8 +1,8 @@
 <tr id="user_<%= user.id %>">
   <td><%= user.updated_at.strftime("%d %b %Y - %H:%M") %></td>
+  <td><%= user.title %></td>  
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td><%= user.title %></td>
   <td><%= user.phone %></td>
   <td class="status_<%= user.status %>"><%= user.status ? 'active' : 'inactive' %></td>
   <td><%= link_to "Edit", edit_user_path(user), remote: true, class: "btn btn-success btn-sm" %>
