@@ -1,6 +1,6 @@
 # A SIMPLE USER LIST
 
-A simple user list exercise with one view page and using ajax actions to add, edit, delete, sort, and filter users.
+A simple user list exercise with one view page using ajax actions to add, edit, delete, sort, and filter users.
 
  1. Ruby 2.6.4
  2. Rails 6.0.2.2
