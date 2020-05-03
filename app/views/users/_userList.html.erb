@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= sortable "updated_at", "Last Updated", params[:query] %></th>
+      <th><%= sortable "name", "Name", params[:query] %></th>
+      <th><%= sortable "email", "Email", params[:query] %></th>
+      <th><%= sortable "title", "Title", params[:query] %></th>
+      <th><%= sortable "phone", "Phone", params[:query] %></th>
+      <th><%= sortable "status", "Status", params[:query] %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody id="users">
+    <%= render @users %>
+  </tbody>
+</table>
+<div id="paginationing">
+  <%= will_paginate @users %>
+</div>
