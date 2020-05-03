@@ -6,7 +6,11 @@ class UsersController < ApplicationController
   def index
     @user = User.new 
     if params[:query].present?
-      @users = User.where("name ILIKE ? or email ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").order("#{sort_column} #{sort_direction}").paginate(page: params[:page])
+      if Rails.env.development?
+        @users = User.where("name LIKE ? or email LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").order("#{sort_column} #{sort_direction}").paginate(page: params[:page])
+      else
+        @users = User.where("name ILIKE ? or email ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").order("#{sort_column} #{sort_direction}").paginate(page: params[:page])
+      end
     else
       set_users
     end
